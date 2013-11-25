@@ -1,8 +1,8 @@
 dataSource {
     pooled = true
     driverClassName = "com.mysql.jdbc.Driver"
-    username = "root"
-    password = "admin"
+    username = "zyk"
+    password = "18273716526"
 }
 hibernate {
     cache.use_second_level_cache = true
@@ -14,19 +14,19 @@ environments {
     development {
         dataSource {
             dbCreate = "create" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:mysql://localhost:3306/phonelibV2"
+            url = "jdbc:mysql://localhost:3306/phonelibV2test"
         }
     }
     test {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:mysql://localhost:3306/phonelibV2"
+            url = "jdbc:mysql://localhost:3306/phonelibV2test"
         }
     }
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:mysql://localhost:3306/phonelibV2"
+            url = "jdbc:mysql://localhost:3306/phonelibV2test"
             pooled = true
             properties {
                maxActive = -1
