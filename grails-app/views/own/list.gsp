@@ -133,10 +133,15 @@
 											</div>
 										</div>
 										<div class="modal-footer">
+										<g:form method="post" >
+											<g:hiddenField name="id" value="${ownInstance?.id}" />
+											<g:hiddenField name="version" value="${ownInstance?.version}" />
+											
+											<g:actionSubmit class="btn btn-primary" action="delete" value="删除" formnovalidate="" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+											<g:link class="btn btn-primary" action="edit" params="[id:ownInstance.id]">修改</g:link>
 											<button type="button" class="btn btn-default"
 												data-dismiss="modal">关闭</button>
-											<button type="button" class="btn btn-primary">Save
-												changes</button>
+										</g:form>	
 										</div>
 									</div>
 									<!-- /.modal-content -->
